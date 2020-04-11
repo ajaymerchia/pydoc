@@ -1,5 +1,5 @@
 {
-  "name": "pydoc",
+  "name": "pydoc-headers",
   "main": "./lib/pydoc",
   "version": "0.4.0",
   "description": "A short description of your package",
@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "pydoc:comment"
   },
-  "repository": "https://github.com/atom/pydoc",
+  "repository": "https://github.com/amerchia-mw/pydoc",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
