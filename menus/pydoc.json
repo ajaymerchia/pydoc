@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "comment pydoc",
+        "command": "pydoc:comment"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "pydoc",
+          "submenu": [
+            {
+              "label": "comment",
+              "command": "pydoc:comment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
