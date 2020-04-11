@@ -1,0 +1,5 @@
+{
+  "atom-workspace": {
+    "alt-cmd-/": "python-docstring:comment"
+  }
+}

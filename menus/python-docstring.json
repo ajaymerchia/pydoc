@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Comment Python Docstring",
+        "command": "python-docstring:comment"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "python-docstring",
+          "submenu": [
+            {
+              "label": "Comment Python Docstring",
+              "command": "python-docstring:comment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
