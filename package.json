@@ -2,13 +2,13 @@
   "name": "pydoc",
   "main": "./lib/pydoc",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Automatically add descriptive docstrings to your Python methods!",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "pydoc:comment"
   },
-  "repository": "https://github.com/atom/pydoc",
+  "repository": "https://github.com/amerchia-mw/pydoc",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
