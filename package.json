@@ -1,13 +1,13 @@
 {
-  "name": "python-docstring",
-  "main": "./lib/python-docstring",
+  "name": "pydoc",
+  "main": "./lib/pydoc",
   "version": "0.4.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "python-docstring:comment"
+    "atom-workspace": "pydoc:comment"
   },
-  "repository": "https://github.com/atom/python-docstring",
+  "repository": "https://github.com/atom/pydoc",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

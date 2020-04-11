@@ -3,7 +3,7 @@
     "atom-text-editor": [
       {
         "label": "Comment Python Docstring",
-        "command": "python-docstring:comment"
+        "command": "pydoc:comment"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "python-docstring",
+          "label": "pydoc",
           "submenu": [
             {
               "label": "Comment Python Docstring",
-              "command": "python-docstring:comment"
+              "command": "pydoc:comment"
             }
           ]
         }

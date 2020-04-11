@@ -1,6 +1,6 @@
 'use babel';
 
-import PythonDocstring from '../lib/python-docstring';
+import PythonDocstring from '../lib/pydoc';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -12,32 +12,32 @@ describe('PythonDocstring', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('python-docstring');
+    activationPromise = atom.packages.activatePackage('pydoc');
   });
 
-  describe('when the python-docstring:comment event is triggered', () => {
+  describe('when the pydoc:comment event is triggered', () => {
     it('adds a python docstring based on the formatted method header', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.python-docstring')).not.toExist();
+      expect(workspaceElement.querySelector('.pydoc')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'python-docstring:comment');
+      atom.commands.dispatch(workspaceElement, 'pydoc:comment');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.python-docstring')).toExist();
+        expect(workspaceElement.querySelector('.pydoc')).toExist();
 
-        let pythonDocstringElement = workspaceElement.querySelector('.python-docstring');
+        let pythonDocstringElement = workspaceElement.querySelector('.pydoc');
         expect(pythonDocstringElement).toExist();
 
         let pythonDocstringPanel = atom.workspace.panelForItem(pythonDocstringElement);
         expect(pythonDocstringPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'python-docstring:comment');
+        atom.commands.dispatch(workspaceElement, 'pydoc:comment');
         expect(pythonDocstringPanel.isVisible()).toBe(false);
       });
     });
@@ -51,11 +51,11 @@ describe('PythonDocstring', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.python-docstring')).not.toExist();
+      expect(workspaceElement.querySelector('.pydoc')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'python-docstring:comment');
+      atom.commands.dispatch(workspaceElement, 'pydoc:comment');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,9 +63,9 @@ describe('PythonDocstring', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let pythonDocstringElement = workspaceElement.querySelector('.python-docstring');
+        let pythonDocstringElement = workspaceElement.querySelector('.pydoc');
         expect(pythonDocstringElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'python-docstring:comment');
+        atom.commands.dispatch(workspaceElement, 'pydoc:comment');
         expect(pythonDocstringElement).not.toBeVisible();
       });
     });

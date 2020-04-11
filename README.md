@@ -1,4 +1,4 @@
-# python-docstring package
+# pydoc package
 
 A short description of your package.
 
